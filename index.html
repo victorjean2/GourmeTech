@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GourmeTech</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/burger.css">
+    <script src="js/scripts.js" defer></script>
+    <script src="js/burger.js" defer></script>
 </head>
 
 <body>
@@ -16,17 +18,17 @@
             <article class="logo-circle">G</article>
             <span class="logo-text">GourmeTech</span>
         </a>
-        <nav class="Navigation-principale">
+        <nav class="nav">
             <button class="burger-menu" id="burgerMenu" aria-label="Menu">
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
             </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="recette.html">Ajouter une recette</a></li>
-                <li><a href="favoris.html">Mes favoris</a></li>
-                <li><a href="a-propos.html">À propos</a></li>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="recette.html" class="nav-link">Ajouter une recette</a></li>
+                <li><a href="favoris.html" class="nav-link">Mes favoris</a></li>
+                <li><a href="a-propos.html" class="nav-link">À propos</a></li>
             </ul>
         </nav>
         <div class="header-actions">

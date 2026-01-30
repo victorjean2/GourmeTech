@@ -1,0 +1,91 @@
+.nav {
+    position: relative;
+}
+
+/* Bouton burger : caché par défaut, affiché sur mobile */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    gap: 5px;
+    z-index: 1001;
+}
+
+/* Lignes du burger */
+.burger-line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-primary);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 2px;
+    display: block;
+    transform-origin: center;
+}
+
+/* Transformation en croix au hover (seulement si pas actif) */
+.burger-menu:hover:not(.active) .burger-line:nth-child(1) {
+    transform: translate(8px, 8px) rotate(45deg);
+}
+
+.burger-menu:hover:not(.active) .burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu:hover:not(.active) .burger-line:nth-child(3) {
+    transform: translate(7px, -7px) rotate(-45deg);
+}
+
+/* Transformation en croix quand le menu est ouvert */
+/* Classe 'active' ajoutée par JavaScript */
+.burger-menu.active .burger-line:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px) !important;
+}
+
+.burger-menu.active .burger-line:nth-child(2) {
+    opacity: 0 !important;
+}
+
+.burger-menu.active .burger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px) !important;
+}
+
+/* Menu de navigation : style par défaut (desktop) */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+/* Ligne animée sous les liens au hover */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+    width: 100%;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--accent);
+}
