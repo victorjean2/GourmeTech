@@ -1,0 +1,247 @@
+/* =========================================
+   RESET & BASES
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 90%;
+}
+/* =========================================
+   STYLE MOBILE (Par défaut / Mobile First)
+   ========================================= */
+body {
+max-width: 1200px;
+margin: 0 auto;
+padding: 1rem;
+margin-top: auto;
+margin-bottom: auto;
+}
+
+main {
+  margin-bottom: 4rem;
+}
+
+
+/* NAVIGATION */
+.logo {
+    color: rgb(230, 125, 34);
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    gap: 0.4rem;
+}
+
+.logo-circle {
+    border-radius: 50%;
+    background-color: rgb(230, 125, 34);
+    color: white;
+    ;
+}
+
+.site-header {
+    border-bottom: 1px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(241, 239, 239);
+} 
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: rgb(67, 75, 77);
+
+}
+
+
+
+/* search-card */
+input {
+  width: 180%;
+}
+
+.search-btn {
+  background-color: rgb(230, 125, 34);
+  color: white;
+}
+
+.search-card {
+  width:50%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* .search-form {
+;
+} */
+
+.fieldset-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 400px;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  border-radius: 6px;
+  width: 100%;
+  
+}
+
+legend {
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  margin: 0.3rem 0;
+}
+
+
+/* recettes */
+.recettes-container {
+   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+   
+}
+
+.recettes-container img {
+   width: 100%; 
+   height: 100%;
+   aspect-ratio:16/9 ;
+   object-fit: cover;
+   border-radius: 4%;
+   transition: 0.5s;
+   display: flex;
+   /* flex-direction: column;
+   align-items: center; */
+}
+
+.image-card {
+  gap: 24px;
+}
+
+.recette-btn {
+  display: block;
+  background-color: rgb(230, 125, 34);
+  color: white;
+  text-decoration: none;
+  width: 35%;
+}
+.recette-action {
+  border-radius: 50px;
+  gap: 100px;
+}
+
+.desset-btn {
+  background-color: rgb(230, 125, 34);
+  color: white;
+}
+
+.plat-btn {
+  background-color: rgb(230, 125, 34);
+  color: white;
+}
+
+.entree-btn {
+  background-color: rgb(230, 125, 34);
+  color: white;
+}
+
+.desset-time-btn {
+  background-color: rgb(75, 191, 127);
+  color: white;
+}
+
+.plat-time-btn {
+  background-color: rgb(75, 191, 127);
+  color: white;
+}
+
+.entree-time-btn {
+  background-color: rgb(75, 191, 127);
+  color: white;
+}
+
+.desset-level-btn {
+  background-color: rgb(50, 148, 209);
+  color: white;
+}
+
+.plat-level-btn {
+  background-color: rgb(50, 148, 209);
+  color: white;
+}
+
+.entree-level-btn {
+  background-color: rgb(50, 148, 209);
+  color: white;
+}
+
+/* FOOTER */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.footer-Nav {
+   text-align: left;
+}
+
+footer .nav-menu {
+  display: block;
+  padding-left: 0;
+}
+
+footer .nav-menu li {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+   /* =========================================
+   MEDIA QUERY : TABLETTE (>= 600px)
+   ========================================= */
+
+@media (max-width: 600px) {
+  .recettes-container {
+    grid-template-columns: 1fr;
+  }
+  footer .nav-menu {
+    align-items: center;
+  }
+}
+
+
+
+
+
+
+
+   /* =========================================
+   MEDIA QUERY : ORDINATEUR (>= 900px)
+   ========================================= */
+
+    @media (max-width: 900px) {
+  .recettes-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

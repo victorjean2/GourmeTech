@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GourmeTech</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <a href="index.html" class="logo">
+            <article class="logo-circle">G</article>
+            <span class="logo-text">GourmeTech</span>
+        </a>
+        <nav aria-label="Navigation-principale">
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="recette.html">Ajouter une recette</a></li>
+                <li><a href="favoris.html">Mes favoris</a></li>
+                <li><a href="a-propos.html">À propos</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button id="theme-toggle" aria-label="Activer le mode sombre">
+                🌙
+            </button>
+
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <section class="search-card">
+            <form class="search-form">
+
+                <!-- Recherche texte -->
+                <input type="search" name="q" placeholder="Rechercher une recette..."
+                    aria-label="Rechercher une recette">
+
+                <button type="submit" class="search-btn">Rechercher</button>
+
+                <section class="fieldset-section">
+                    <!-- Catégorie -->
+                    <fieldset class="category">
+                        <legend>Catégorie</legend>
+
+                        <label>
+                            <input type="checkbox" name="category" value="entree">
+                            Entrée
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="category" value="plat">
+                            Plat
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="category" value="dessert">
+                            Dessert
+                        </label>
+                    </fieldset>
+
+
+                    <!-- Temps de préparation -->
+                    <fieldset class="time">
+                        <legend>Temps de préparation</legend>
+
+                        <label>
+                            <input type="checkbox" name="time" value="rapide">
+                            Rapide (&lt; 30 min)
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="time" value="moyen">
+                            Moyen (30–60 min)
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="time" value="long">
+                            Long (&gt; 60 min)
+                        </label>
+                    </fieldset>
+
+                    <!-- Difficulté -->
+                    <fieldset class="level">
+                        <legend>Difficulté</legend>
+
+                        <label>
+                            <input type="checkbox" name="difficulty" value="facile">
+                            Facile
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="difficulty" value="moyen">
+                            Moyen
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="difficulty" value="difficile">
+                            Difficile
+                        </label>
+                    </fieldset>
+                </section>
+
+            </form>
+        </section>
+
+        <section class="recettes-container">
+            <div class="image-card" id="tarte">
+                <img src="assets/images/fountain-pen-c5H9jN-VB-0-unsplash.jpg" alt="image tarte aux pommes">
+                <h3>Tarte aux pommes</h3>
+                <div class="recette-action">
+                    <button class="desset-btn">Dessert</button>
+                    <button class="desset-time-btn">60 min</button>
+                    <button class="desset-level-btn">Facile</button>
+                    <a href="recette.html" class="recette-btn">Voir la recette</a>
+                </div>
+            </div>
+            <div class="image-card" id="ratatouille">
+                <img src="assets/images/vegetables-2735873_1920.jpg" alt="image ratatouille">
+                <h3>Ratatouilles provençale</h3>
+                <div class="recette-action">
+                    <button class="plat-btn">Plat</button>
+                    <button class="plat-time-btn">45 min</button>
+                    <button class="plat-level-btn">Moyen</button>
+                    <a href="recette.html" class="recette-btn">Voir la recette</a>
+                </div>
+            </div>
+            <div class="image-card" id="soupe">
+                <img src="assets/images/pumpkin-soup-7534625_1920.jpg" alt="image zsoupe aux potiron">
+                <h3>Velouté de  potirons</h3>
+                <div class="recette-action">
+                    <button class="entree-btn">Entrée</button>
+                    <button class="entree-time-btn">45 min</button>
+                    <button class="entree-level-btn">Moyen</button>
+                    <a href="recette.html" class="recette-btn">Voir la recette</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+        <nav aria-label="footer-Nav">
+            <h3>Navigation</h3>
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="recette.html">Ajouter une recettes</a></li>
+                <li><a href="favoris.html">Mes favoris</a></li>
+                <li><a href="a-propos.html">A propos</a></li>
+            </ul>
+        </nav>
+        <nav class="footer-about">
+            <h3>A propos de GourmeTech</h3>
+            <p>GourmeTech est une plateforme de recettes cullinaires interactive développée dans le cadre d'un projet
+                pédagogoique.</p>
+        </nav>
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 GourmeTech- Tous droits réservés.
+        </div>
+    </footer>
+</body>
+
+</html>
